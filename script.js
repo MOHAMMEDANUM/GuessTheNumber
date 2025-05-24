@@ -12,9 +12,22 @@
         let playagain =()=>{
 
             outputGussed.textContent ="?";
+            outputGussed.style="margin-left: 275px"
+
+            outputMsg.textContent="Guess the Number"
+            outputMsg.style="background-color:white"
+
+            attempted.innerText=""
+
+            displayimg.style="display:flex"
+            imagesOfAttempts[2].style="display:flex"
+            imagesOfAttempts[1].style="display:flex"
+
             attempts = 3;
+
             startbtn.style="display:none"
             generateBtn.style="display:flex;justify-content: center;align-items: center;"
+
             generateBtn.addEventListener("click" , generateNo);
             randomNo = Math.round(Math.random()*10);
 
