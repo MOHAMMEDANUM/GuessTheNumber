@@ -77,7 +77,7 @@ body{
         
         
     }
-    img{
+    .images img{
         height: 40px;
         width: 40px;
       }
@@ -86,6 +86,43 @@ body{
         justify-content:right;
         margin-left: auto;
         margin-right: 40px;
+    }
+
+                /* Celebration Images Style*/
+
+    .topimages{
+        display: none;
+        justify-content: space-between;
+    }
+    #topleft{
+        width: 15%;
+        rotate: 90deg;
+        border-radius: 20px;
+    }
+    #topright{
+        width: 15%;
+        rotate: 180deg;
+        border-radius: 20px;
+
+    }
+
+    .buttomimages{
+        display: none;
+        justify-content: space-between;
+        margin-top: 39px;
+    }
+
+    #buttomleft{
+        width: 15%;
+        rotate: 360deg;
+        border-radius: 20px;
+    }
+    #buttomright{
+        width: 15%;
+        rotate: 270deg;
+        border-radius: 20px;
+        margin-right: 1px;
+        
     }
       
       
