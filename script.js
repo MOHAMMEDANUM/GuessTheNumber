@@ -58,9 +58,14 @@
                   attempts--
                 if(attempts==2){
                     displayimg.style="display:flex"
-                    imagesOfAttempts[0].style="display:none"
+                    imagesOfAttempts[2].style="display:none"
                     outputGussed.style="margin-left: 275px"
-
+                }
+                if(attempts==1){
+                    displayimg.style="display:flex"
+                    imagesOfAttempts[2].style="display:none"
+                    imagesOfAttempts[1].style="display:none"
+                    outputGussed.style="margin-left: 275px"
                 }
                   attempted.textContent=` Attempts left is : ${attempts}`
                 }
@@ -74,6 +79,10 @@
                   outputMsg.style="background-color:red"
                   attempted.textContent=`Correct Number was ${randomNo}`
                   outputGussed.textContent = randomNo
+                  displayimg.style="display:none"
+                  outputGussed.style="margin-left: 0px"
+
+                  
 
 
                   return
