@@ -118,14 +118,11 @@
                   outputMsg.textContent =  `YOU HAVE LOST THE GAME`
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
-                  outputMsg.style="background-color:red"
+                  outputMsg.style="background-color:red;color:white;border:none"
                   attempted.textContent=`Correct Number was ${randomNo}`
                   outputGussed.textContent = randomNo
                   displayimg.style="display:none"
                   outputGussed.style="margin-left: 0px"
-
-                  
-
 
                   return
                 
