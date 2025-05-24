@@ -23,14 +23,34 @@ body{
         font-size:100px;
         text-align: center;
       }
-      #btn{
+      #btn1{
         background-color: aliceblue;
         padding: 20px;
         border-radius: 20px;
         width: 30%;
         margin: 0 auto;
-
+        border: 1px solid purple;
       }
+      #btn1:hover{
+        background-color: purple;
+        color: aliceblue;
+      }
+
+      #btn2{
+        display: none;
+        background-color: aliceblue;
+        padding: 20px;
+        border-radius: 20px;
+        width: 30%;
+        margin: 0 auto;
+        border: 1px solid purple;
+      }
+      #btn2:hover{
+        background-color: purple;
+        color: aliceblue;
+      }
+
+
       #msg{
         text-align: center;
         margin-top: 80px;

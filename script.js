@@ -1,4 +1,5 @@
-let btn = document.querySelector("#btn")
+        let generateBtn = document.querySelector("#btn1")
+        let btn2 = document.querySelector("#btn2")
         let outputGussed = document.querySelector("#winner")
         let outputMsg = document.querySelector("#msg")
         let randomNo = Math.round(Math.random()*20);
@@ -46,4 +47,4 @@ let btn = document.querySelector("#btn")
 
                 attempted.textContent=` Attempts left is : ${attempts}`
             }            
-        btn.addEventListener("click" , generateNo);
+        generateBtn.addEventListener("click" , generateNo);
