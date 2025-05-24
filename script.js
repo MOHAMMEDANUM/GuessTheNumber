@@ -14,7 +14,7 @@
             startbtn.style="display:none"
             generateBtn.style="display:flex;justify-content: center;align-items: center;"
             generateBtn.addEventListener("click" , generateNo);
-            randomNo = Math.round(Math.random()*20);
+            randomNo = Math.round(Math.random()*10);
 
         }
         startbtn.addEventListener("click",playagain)
@@ -23,7 +23,7 @@
                console.log(randomNo);
                console.log(attempts);
                 
-                let userInput = prompt("Guess the Number Between 0 to 20")
+                let userInput = prompt("Guess the Number Between 0 to 10")
 
                 // WINNER
                 
@@ -33,8 +33,6 @@
                   outputMsg.style="background-color:green;border: none"
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
-
-                  
                   return
                 }
 
@@ -56,7 +54,7 @@
 
                 if(attempts > 0){
                   attempts--
-                  
+
                   attempted.textContent=` Attempts left is : ${attempts}`
                 }
 
@@ -70,7 +68,6 @@
                   attempted.textContent="Try again no attempts left"
                   return
                 
-                //   attempts = 3
                 }
 
             }            
