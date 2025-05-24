@@ -66,6 +66,9 @@
                   generateBtn.style="display:none"
                   outputMsg.style="background-color:red"
                   attempted.textContent="Try again no attempts left"
+                  outputGussed.textContent = randomNo;
+
+
                   return
                 
                 }

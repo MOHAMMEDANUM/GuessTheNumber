@@ -19,26 +19,21 @@ body{
         height: 600px;
         border-radius: 20px;
       }
-      .inner h1{
-        font-size:100px;
-        text-align: center;
-        margin: 40px 0;
-      }
-
+      
       #btn1{
-        background-color: aliceblue;
-        padding: 20px;
+          background-color: aliceblue;
+          padding: 20px;
         border-radius: 20px;
         width: 30%;
         margin: 0 auto;
         border: 1px solid purple;
-      }
-      #btn1:hover{
+    }
+    #btn1:hover{
         background-color: purple;
         color: aliceblue;
-      }
-
-      #btn2{
+    }
+    
+    #btn2{
         display: none;
         background-color: aliceblue;
         
@@ -47,23 +42,48 @@ body{
         width: 30%;
         margin: 0 auto;
         border: 1px solid purple;
-      }
-      #btn2:hover{
+    }
+    #btn2:hover{
         background-color: purple;
         color: aliceblue;
-      }
-
-
-      #msg{
+    }
+    
+    
+    #msg{
         text-align: center;
         margin: 80px 20px 0 20px;
         border: 1px solid black;
         border-radius: 20px;
         display: inline;
-      }
-      span{
+    }
+    span{
         text-align: center;
         font-size: 40px;
         margin-top: 20px;
+    }
+    .inner h1{
+      display: inline;
+      font-size:100px;
+      text-align: center;
+      margin: 40px;
+      margin-left: 280px;
+    }
+    .inside-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    img{
+        height: 40px;
+        width: 40px;
       }
+    .images{
+        display: flex;
+        justify-content:right;
+        margin-left: auto;
+        margin-right: 40px;
+    }
+      
       
