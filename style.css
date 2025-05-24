@@ -1,0 +1,44 @@
+body{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+      .outer{
+        background-color:purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+      }
+      .inner{
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        width: 600px;
+        height: 600px;
+        border-radius: 20px;
+      }
+      .inner h1{
+        font-size:100px;
+        text-align: center;
+      }
+      #btn{
+        background-color: aliceblue;
+        padding: 20px;
+        border-radius: 20px;
+        width: 30%;
+        margin: 0 auto;
+
+      }
+      #msg{
+        text-align: center;
+        margin-top: 80px;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: inline;
+      }
+      span{
+        text-align: center;
+        font-size: 40px;
+      }
