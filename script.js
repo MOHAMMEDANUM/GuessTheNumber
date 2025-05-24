@@ -46,12 +46,14 @@
                   attempted.textContent=` Attempts left is : ${attempts}`
                 }
 
-                //  Attempts Zero
+                //  Losser Attempts Zero
 
                 if(attempts==0){
                   outputMsg.textContent =  `YOU HAVE LOST THE GAME`
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
+                  outputMsg.style="background-color:red"
+
 
                 //   attempts = 3
                 }
