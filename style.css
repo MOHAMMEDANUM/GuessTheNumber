@@ -22,7 +22,9 @@ body{
       .inner h1{
         font-size:100px;
         text-align: center;
+        margin: 40px 0;
       }
+
       #btn1{
         background-color: aliceblue;
         padding: 20px;
@@ -54,7 +56,7 @@ body{
 
       #msg{
         text-align: center;
-        margin-top: 80px;
+        margin: 80px 20px 0 20px;
         border: 1px solid black;
         border-radius: 20px;
         display: inline;
@@ -62,4 +64,5 @@ body{
       span{
         text-align: center;
         font-size: 40px;
+        margin-top: 20px;
       }
