@@ -1,5 +1,5 @@
         let generateBtn = document.querySelector("#btn1")
-        let btn2 = document.querySelector("#btn2")
+        let startbtn = document.querySelector("#btn2")
         let outputGussed = document.querySelector("#winner")
         let outputMsg = document.querySelector("#msg")
         let randomNo = Math.round(Math.random()*20);
@@ -38,13 +38,16 @@
 
                 if(attempts > 0){
                   attempts--
+                  attempted.textContent=` Attempts left is : ${attempts}`
                 }
 
-                else{
-                  outputMsg.textContent =  `LOOSER LOOSER`
-                  attempts = 3
+                if(attempts==0){
+                  outputMsg.textContent =  `YOU HAVE LOST THE GAME`
+                  startbtn.style="display:flex;justify-content: center;align-items: center;"
+                  generateBtn.style="display:none"
+
+                //   attempts = 3
                 }
 
-                attempted.textContent=` Attempts left is : ${attempts}`
             }            
         generateBtn.addEventListener("click" , generateNo);
