@@ -12,11 +12,10 @@
              outputMsg.style="background-color: white"
                console.log(randomNo);
                console.log(attempts);
-
-            // if(attempts>0){
-
                 
                 let userInput = prompt("Guess the Number Between 0 to 20")
+
+                // WINNER
                 
                 if(userInput == randomNo){
                   outputGussed.textContent = randomNo;
@@ -26,20 +25,28 @@
                   return;
                 }
 
+                // Greater Number
+
                 else if(userInput > randomNo){
                   outputMsg.textContent = `The Entered ${userInput} Number is Greater !!`
                   outputMsg.style="background-color:orange;border: none"
                 }
+
+                // Lesser Number
 
                 else if(userInput < randomNo){
                   outputMsg.textContent =  `The Entered ${userInput} Number is Lesser !!`
                   outputMsg.style="background-color:orange;border: none"
                 }
 
+                //  Attempts Left
+
                 if(attempts > 0){
                   attempts--
                   attempted.textContent=` Attempts left is : ${attempts}`
                 }
+
+                //  Attempts Zero
 
                 if(attempts==0){
                   outputMsg.textContent =  `YOU HAVE LOST THE GAME`
