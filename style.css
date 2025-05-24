@@ -18,6 +18,8 @@ body{
         width: 600px;
         height: 600px;
         border-radius: 20px;
+        border: inset 3px solid rgb(92, 5, 92);
+
       }
       
       #btn1{
@@ -41,7 +43,7 @@ body{
         border-radius: 20px;
         width: 30%;
         margin: 0 auto;
-        border: 1px solid purple;
+        border: 3px solid purple;
     }
     #btn2:hover{
         background-color: purple;
@@ -51,10 +53,11 @@ body{
     
     #msg{
         text-align: center;
-        margin: 80px 20px 0 20px;
+        margin: 60px 20px 0 20px;
         border: 1px solid black;
         border-radius: 20px;
         display: inline;
+        padding: 5px 0;
     }
     span{
         text-align: center;
@@ -81,11 +84,26 @@ body{
         height: 40px;
         width: 40px;
       }
+    #img1{
+        display: flex;
+
+    }
+    #img2{
+        display: flex;
+
+    }
+    #img3{
+        display: flex;
+
+    }
+
     .images{
         display: flex;
         justify-content:right;
         margin-left: auto;
         margin-right: 40px;
+        border: 3px solid rgb(92, 5, 92);
+        border-radius: 20px 10px;
     }
 
                 /* Celebration Images Style*/
@@ -109,7 +127,7 @@ body{
     .buttomimages{
         display: none;
         justify-content: space-between;
-        margin-top: 39px;
+        margin-top: 33px;
     }
 
     #buttomleft{
