@@ -66,7 +66,7 @@ body{
       font-size:100px;
       text-align: center;
       margin: 40px;
-      margin-left: 280px;
+      
     }
     .inside-inner{
         display: flex;
@@ -80,7 +80,7 @@ body{
         width: 40px;
       }
     .images{
-        display: flex;
+        display: none;
         justify-content:right;
         margin-left: auto;
         margin-right: 40px;
