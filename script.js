@@ -6,6 +6,9 @@
         let attempted = document.querySelector("span")
         let displayimg =document.querySelector(".images")
         let imagesOfAttempts = document.getElementsByTagName("img")
+        let topcelebrationimgs =document.getElementsByClassName("topimages")
+        let buttomcelebrationimgs =document.getElementsByClassName("buttomimages")
+
         
         let attempts = 3;
 
@@ -28,6 +31,9 @@
             startbtn.style="display:none"
             generateBtn.style="display:flex;justify-content: center;align-items: center;"
 
+            topcelebrationimgs[0].style="display:none"
+
+
             generateBtn.addEventListener("click" , generateNo);
             randomNo = Math.round(Math.random()*10);
 
@@ -48,6 +54,9 @@
                   outputMsg.style="background-color:green;border: none"
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
+
+                  topcelebrationimgs[0].style="display:flex"
+                  buttomcelebrationimgs[1].style="display:flex"
                   return
                 }
 
