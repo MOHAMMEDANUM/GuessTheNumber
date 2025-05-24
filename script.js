@@ -7,9 +7,19 @@
         
         let attempts = 3;
 
-       
+        let playagain =()=>{
+
+            outputGussed.textContent ="?";
+            attempts = 3;
+            startbtn.style="display:none"
+            generateBtn.style="display:flex;justify-content: center;align-items: center;"
+            generateBtn.addEventListener("click" , generateNo);
+            randomNo = Math.round(Math.random()*20);
+
+        }
+        startbtn.addEventListener("click",playagain)
         let generateNo = ()=>{
-             outputMsg.style="background-color: white"
+               outputMsg.style="background-color: white"
                console.log(randomNo);
                console.log(attempts);
                 
@@ -21,8 +31,11 @@
                   outputGussed.textContent = randomNo;
                   outputMsg.textContent = `!! WINNER WINNER CHICKEN DINNER !!`
                   outputMsg.style="background-color:green;border: none"
-                  attempts = 3;
-                  return;
+                  startbtn.style="display:flex;justify-content: center;align-items: center;"
+                  generateBtn.style="display:none"
+
+                  
+                  return
                 }
 
                 // Greater Number
@@ -43,6 +56,7 @@
 
                 if(attempts > 0){
                   attempts--
+                  
                   attempted.textContent=` Attempts left is : ${attempts}`
                 }
 
@@ -53,10 +67,13 @@
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
                   outputMsg.style="background-color:red"
-
-
+                  attempted.textContent="Try again no attempts left"
+                  return
+                
                 //   attempts = 3
                 }
 
             }            
         generateBtn.addEventListener("click" , generateNo);
+        
+
