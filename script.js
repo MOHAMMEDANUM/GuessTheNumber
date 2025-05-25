@@ -140,7 +140,7 @@
 
 
                 // Invalid Input
-                
+
                 else if(userInput === null || userInput === "" || isNaN(userInput) || userInput < 0 || userInput > 10){
                         outputMsg.textContent = "Please Enter a Valid Number Between 0 to 10"
                         outputMsg.style="background-color: red;color:white;border:none"
@@ -192,6 +192,9 @@
                   attempted.textContent=` Attempts left is : ${attempts} `
                 }
 
+                displayGameAttempts[2].innerHTML +=' ' + userInput + ','
+
+
                 //  Losser Attempts Zero
 
                 if(attempts==0){
@@ -215,7 +218,6 @@
                 // Updating Game Stats
 
                 displayGameAttempts[1].textContent = `Attempts : ${attempts} / 3`
-                displayGameAttempts[2].innerHTML +=' ' + userInput + ','
 
             }
 
