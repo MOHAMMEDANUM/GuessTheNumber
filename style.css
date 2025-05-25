@@ -6,7 +6,7 @@ body{
       .outer{
         background-color:purple;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         height: 100vh;
         
@@ -60,6 +60,8 @@ body{
         padding: 5px 0;
     }
     span{
+        display: flex;
+        justify-content: center;
         text-align: center;
         font-size: 40px;
         margin-top: 20px;
@@ -108,7 +110,7 @@ body{
 
                 /* input-submit-giveapp-btns */
 
-    .input-submit-giveapp-btns{
+    .input-submit-giveup-btns{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -116,17 +118,24 @@ body{
         gap: 40px;
         
     }
-    .input-submit-giveapp-btns input{
+    .input-submit-giveup-btns input{
         padding: 10px;
         border-radius: 20px;
         border: 3px solid purple;
         width: 200px;
         text-align: center;
     }
-    .input-submit-giveapp-btns input:hover{
-        border-color: purple;
+    .input-submit-giveup-btns input:hover{
+        border: 3px solid purple;
     }
-    .input-submit-giveapp-btns button{
+    
+    /* if i tap on input purple color border has to be there for that i use focus */
+    .input-submit-giveup-btns input:focus{
+        outline: none;
+        border: 3px solid purple;
+    }
+
+    .input-submit-giveup-btns button{
         padding: 10px;
         border-radius: 20px;
         border: 3px solid purple;
@@ -134,7 +143,7 @@ body{
         width: 100px;
         text-align: center;
     }
-    .input-submit-giveapp-btns button:hover{
+    .input-submit-giveup-btns button:hover{
         background-color: purple;
         color: white;
         border: none;

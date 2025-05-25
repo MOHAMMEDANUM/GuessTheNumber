@@ -1,10 +1,14 @@
+
+        
+      //  HTML Elements
+       
         let generateBtn = document.querySelector("#btn1")
         let startbtn = document.querySelector("#btn2")
 
         let outputGussed = document.querySelector("#winner")
         let outputMsg = document.querySelector("#msg")
 
-        let randomNo = Math.round(Math.random()*10);
+        
         let attempted = document.querySelector("span")
 
         let displayimg =document.querySelector(".images")
@@ -16,8 +20,13 @@
         let topcelebrationimgs =document.getElementsByClassName("topimages")
         let buttomcelebrationimgs =document.querySelector(".buttomimages")
 
+        let guessinput = document.querySelector("#guess")
+        let submitbtn = document.querySelector("#submit")
+        let giveupbtn = document.querySelector("#giveup")
 
-        
+
+        let randomNo
+        let userInput
         let attempts = 3;
 
         let playagain =()=>{
@@ -29,6 +38,11 @@
             outputMsg.style="background-color:white"
 
             attempted.innerText=""
+            guessinput.value = "";
+
+            guessinput.style="display:flex"
+            submitbtn.style="display:flex justify-content: center;align-items: center;"
+            giveupbtn.style="display:flex justify-content: center;align-items: center;"
 
             displayimg.style="display:flex"
             img3.style="display:flex"
@@ -45,45 +59,83 @@
             buttomcelebrationimgs.style="display:none"
 
 
+            if(guessinput.value === ""){
+                outputMsg.textContent = "Please Generate a Random Number First"
+                outputMsg.style="background-color: red;color:white;border:none"
+                return
+            }
 
             generateBtn.addEventListener("click" , generateNo);
-            randomNo = Math.round(Math.random()*10);
+            
+            
 
         }
+
         startbtn.addEventListener("click",playagain)
+
+        // Generate Random Number
+
         let generateNo = ()=>{
                outputMsg.style="background-color: white"
+                outputMsg.textContent = "Enter the Guessed Number"
+               
+              //  console.log(attempts);
+               randomNo = Math.round(Math.random()*10);
                console.log(randomNo);
-               console.log(attempts);
-                
-                let userInput = prompt("Guess the Number Between 0 to 10")
+              }
+        generateBtn.addEventListener("click" , generateNo);
 
+
+        // Submit Guess 
+        let submitNo = ()=>{
+          
+                userInput = guessinput.value;
                 // WINNER
                 
                 if(userInput == randomNo){
                   outputGussed.textContent = randomNo;
+                  outputGussed.style="margin: 10px auto";
                   outputMsg.textContent = `!! WINNER WINNER CHICKEN DINNER !!`
-                  outputMsg.style="border:2px solid green;padding: 10px 0;"
+                  outputMsg.style="border:2px solid green;padding: 10px 0;margin:20px"
                   startbtn.style="display:flex;justify-content: center;align-items: center;"
                   generateBtn.style="display:none"
 
                   topcelebrationimgs[0].style="display:flex"
-                  buttomcelebrationimgs.style="display:flex"
+                  buttomcelebrationimgs.style="display:flex;margin:89px 0 0 0"
+                  submitbtn.style="display:none"
+                  guessinput.style="display:none"
+                  giveupbtn.style="display:none"
+                  
+                  displayimg.style="display:none"
+                  attempted.textContent=""
+
                   return
+                }
+
+                // Invalid Input
+                else if(userInput === null || userInput === "" || isNaN(userInput) || userInput < 0 || userInput > 10){
+                        outputMsg.textContent = "Please Enter a Valid Number Between 0 to 10"
+                        outputMsg.style="background-color: red;color:white;border:none"
+                        return
                 }
 
                 // Greater Number
 
                 else if(userInput > randomNo){
-                  outputMsg.textContent = `The Entered ${userInput} Number is Greater !!`
+                  outputMsg.textContent = `!! ${userInput} Number is Greater !! Try Again`
                   outputMsg.style="background-color:orange;border: none"
+                  guessinput.value = "";
+
                 }
 
                 // Lesser Number
 
                 else if(userInput < randomNo){
-                  outputMsg.textContent =  `The Entered ${userInput} Number is Lesser !!`
+                  outputMsg.textContent =  `!! ${userInput} Number is Lesser !! Try Again`
                   outputMsg.style="background-color:orange;border: none"
+                  guessinput.value = "";
+
+
                 }
 
                 //  Attempts Left
@@ -109,7 +161,7 @@
                     img2.style="display:none"
                     outputGussed.style="margin-left: 275px"
                 }
-                  attempted.textContent=` Attempts left is : ${attempts}`
+                  attempted.textContent=` Attempts left is : ${attempts} `
                 }
 
                 //  Losser Attempts Zero
@@ -123,12 +175,20 @@
                   outputGussed.textContent = randomNo
                   displayimg.style="display:none"
                   outputGussed.style="margin-left: 0px"
+                  guessinput.value = "";
+                  submitbtn.style="display:none"
+                  guessinput.style="display:none"
+                  giveupbtn.style="display:none"
+
+
+
 
                   return
                 
                 }
 
-            }            
-        generateBtn.addEventListener("click" , generateNo);
+            }
+
+        submitbtn.addEventListener("click",submitNo);         
         
 
