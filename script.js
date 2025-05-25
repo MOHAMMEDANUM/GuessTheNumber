@@ -24,15 +24,30 @@
         let submitbtn = document.querySelector("#submit")
         let giveupbtn = document.querySelector("#giveup")
 
+        // Game Stats Section
+        let gameStats = document.querySelector("text")
+        let displayGameAttempts = document.getElementsByTagName("h2")
+
+
+
 
         let randomNo
         let userInput
+        let wins = 0
+        let winstreak = 0
+        let reswinstreak = 0;
         let attempts = 3;
 
         let playagain =()=>{
 
+            // Resetting Game Stats
+
+            displayGameAttempts[1].textContent = `Attempts : 3 / 3`
+            displayGameAttempts[4].textContent = `Winstreak : 0`
+
+
             outputGussed.textContent ="?";
-            outputGussed.style="margin-left: 275px"
+            outputGussed.style="margin-left: 250px"
 
             outputMsg.textContent="Guess the Number"
             outputMsg.style="background-color:white"
@@ -101,13 +116,20 @@
                   generateBtn.style="display:none"
 
                   topcelebrationimgs[0].style="display:flex"
-                  buttomcelebrationimgs.style="display:flex;margin:89px 0 0 0"
+                  
+                  buttomcelebrationimgs.style="display:flex;margin:47px 0 0 0"
                   submitbtn.style="display:none"
                   guessinput.style="display:none"
                   giveupbtn.style="display:none"
                   
                   displayimg.style="display:none"
                   attempted.textContent=""
+
+                  wins++;
+                  displayGameAttempts[3].textContent = `Wins : ${wins}`
+
+                  reswinstreak = (wins > 0 && attempts >=1 )? winstreak++ : winstreak = 0
+                  displayGameAttempts[4].textContent = `Winstreak : ${reswinstreak}`
 
                   return
                 }
@@ -147,19 +169,19 @@
                     imagesOfAttempts[2].style="display:flex"
                     img3.style="display:flex"
                     img1.style="display:flex"
-                    outputGussed.style="margin-left: 275px"
+                    outputGussed.style="margin-left: 250px"
                 }
                 if(attempts==2){
                     displayimg.style="display:flex"
                     imagesOfAttempts[2].style="display:none"
-                    outputGussed.style="margin-left: 275px"
+                    outputGussed.style="margin-left: 250px"
                 }
                 if(attempts==1){
                     displayimg.style="display:flex"
                     imagesOfAttempts[2].style="display:none"
                     img1.style="display:none"
                     img2.style="display:none"
-                    outputGussed.style="margin-left: 275px"
+                    outputGussed.style="margin-left: 250px"
                 }
                   attempted.textContent=` Attempts left is : ${attempts} `
                 }
@@ -179,13 +201,15 @@
                   submitbtn.style="display:none"
                   guessinput.style="display:none"
                   giveupbtn.style="display:none"
-
-
-
-
+                  displayGameAttempts[1].textContent = `Attempts : 0 / 3`
                   return
-                
                 }
+
+
+                // Updating Game Stats
+
+                displayGameAttempts[1].textContent = `Attempts : ${attempts} / 3`
+
 
             }
 
