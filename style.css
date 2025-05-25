@@ -5,6 +5,8 @@
             background-color:purple;
 
     }
+
+    /* Header Section */
     .header{
         display: flex;
         justify-content: center;
@@ -15,6 +17,9 @@
         font-size: 30px;
         font-weight: bold;
     }
+
+
+    
     .outer{
         display: flex;
         justify-content: space-evenly;
@@ -23,6 +28,10 @@
         margin-top: 25px;
         
     }
+
+
+    /* Game Area Section 1 Card */
+
     .inner{
         display: flex;
         flex-direction: column;
@@ -120,7 +129,8 @@
         border-radius: 20px 10px;
     }
 
-                /* input-submit-giveapp-btns */
+    
+    /* input-submit-giveapp-btns */
 
     .input-submit-giveup-btns{
         display: flex;
@@ -142,6 +152,7 @@
     }
     
     /* if i tap on input purple color border has to be there for that i use focus */
+
     .input-submit-giveup-btns input:focus{
         outline: none;
         border: 3px solid purple;
@@ -162,10 +173,7 @@
     }
 
 
-
-
-
-                /* Celebration Images Style*/
+    /* Celebration Images Style*/
 
     .topimages{
         display: none;
@@ -201,8 +209,9 @@
         margin-right: 1px;
         
     }
-    
-     /*Game Status Section 2 */
+
+        
+     /*Game Status Section 2 Card */
 
     .text{
         
