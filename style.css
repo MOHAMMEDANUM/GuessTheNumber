@@ -1,17 +1,17 @@
-body{
+    body{
             padding: 0;
             margin: 0;
             border: 0;
-        }
-      .outer{
+    }
+    .outer{
         background-color:purple;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         height: 100vh;
         
-      }
-      .inner{
+    }
+    .inner{
         display: flex;
         flex-direction: column;
         background-color:white;
@@ -19,10 +19,9 @@ body{
         height: 600px;
         border-radius: 20px;
         border: inset 3px solid rgb(92, 5, 92);
-
-      }
+    }
       
-      #btn1{
+    #btn1{
         background-color: aliceblue;
         padding: 20px;
         border-radius: 20px;
@@ -190,5 +189,24 @@ body{
         
     }
     
-      
-      
+     /*Game Status Section 2 */
+
+    .text{
+        
+        margin-top: 20px;
+    }
+    .text h1{
+        display: block;
+        margin: auto;
+        font-size: 50px;
+        color: purple;
+    }
+    .text h2{
+        display: block;
+        border: 3px solid purple;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: left;
+        font-size: 40px;
+        margin: 40px 60px;
+    }
