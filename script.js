@@ -29,14 +29,15 @@
         let displayGameAttempts = document.getElementsByTagName("h2")
 
 
-
-
         let randomNo
         let userInput
         let wins = 0
         let winstreak = 0
         let reswinstreak = 0;
         let attempts = 3;
+
+
+        // play again function       
 
         let playagain =()=>{
 
@@ -45,9 +46,8 @@
             displayGameAttempts[1].textContent = `Attempts : 3 / 3`
             displayGameAttempts[4].textContent = `Winstreak : 0`
             displayGameAttempts[2].innerHTML = "Your Guesses :  "
-            
 
-
+          // Resetting UI Elements 
 
             outputGussed.textContent ="?";
             outputGussed.style="margin-left: 250px"
@@ -82,14 +82,12 @@
                 outputMsg.style="background-color: red;color:white;border:none"
                 return
             }
-
-            generateBtn.addEventListener("click" , generateNo);
             
-            
+            generateBtn.addEventListener("click" , generateNo)
 
         }
-
         startbtn.addEventListener("click",playagain)
+
 
         // Generate Random Number
 
@@ -104,7 +102,9 @@
         generateBtn.addEventListener("click" , generateNo);
 
 
-        // Submit Guess 
+
+        // Submit Guess Number function
+
         let submitNo = ()=>{
           
                 userInput = guessinput.value;
@@ -138,7 +138,9 @@
                   return
                 }
 
+
                 // Invalid Input
+                
                 else if(userInput === null || userInput === "" || isNaN(userInput) || userInput < 0 || userInput > 10){
                         outputMsg.textContent = "Please Enter a Valid Number Between 0 to 10"
                         outputMsg.style="background-color: red;color:white;border:none"
