@@ -50,12 +50,12 @@
     #btn2{
         display: none;
         background-color: aliceblue;
-        
         padding: 20px;
         border-radius: 20px;
         width: 30%;
         margin: 0 auto;
         border: 3px solid purple;
+        font-size: larger;
     }
     #btn2:hover{
         background-color: purple;

@@ -44,6 +44,9 @@
 
             displayGameAttempts[1].textContent = `Attempts : 3 / 3`
             displayGameAttempts[4].textContent = `Winstreak : 0`
+            displayGameAttempts[2].innerHTML = "Your Guesses :  "
+            
+
 
 
             outputGussed.textContent ="?";
@@ -105,6 +108,7 @@
         let submitNo = ()=>{
           
                 userInput = guessinput.value;
+
                 // WINNER
                 
                 if(userInput == randomNo){
@@ -202,14 +206,14 @@
                   guessinput.style="display:none"
                   giveupbtn.style="display:none"
                   displayGameAttempts[1].textContent = `Attempts : 0 / 3`
+
                   return
                 }
-
 
                 // Updating Game Stats
 
                 displayGameAttempts[1].textContent = `Attempts : ${attempts} / 3`
-
+                displayGameAttempts[2].innerHTML +=' ' + userInput + ','
 
             }
 
