@@ -32,9 +32,9 @@
         let randomNo
         let userInput
         let wins = 0
-        let winstreak = 0
-        let reswinstreak = 0;
-        let attempts = 3;
+        let winstreak = ""
+        let reswinstreak = ""
+        let attempts = 3
 
 
         // play again function       
@@ -44,9 +44,31 @@
             // Resetting Game Stats
 
             displayGameAttempts[1].textContent = `Attempts : 3 / 3`
-            displayGameAttempts[4].textContent = `Winstreak : 0`
+            // displayGameAttempts[4].textContent = `Winstreak : 0`
             displayGameAttempts[2].innerHTML = "Your Guesses :  "
 
+
+            if (wins > 0 && attempts >=1 ) {
+              winstreak = reswinstreak
+              displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
+              console.log(`Winstreak : ${reswinstreak}`);
+              
+            }
+
+            // else if (wins == 0 && attempts >=1) {
+            //   winstreak = 0
+            //   displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
+            // }   
+            // else if (wins == 0 && attempts == 0) {
+            //   winstreak = 0
+            //   displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
+            // }
+            // else if (wins > 0 && attempts == 0) {
+            //   winstreak = 0
+            //   displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
+            // }
+
+            
           // Resetting UI Elements 
 
             outputGussed.textContent ="?";
@@ -134,6 +156,9 @@
 
                   reswinstreak = (wins > 0 && attempts >=1 )? winstreak++ : winstreak = 0
                   displayGameAttempts[4].textContent = `Winstreak : ${reswinstreak}`
+
+                  displayGameAttempts[2].innerHTML +=' ' + userInput + ','
+
 
                   return
                 }
