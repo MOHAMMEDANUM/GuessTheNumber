@@ -172,6 +172,10 @@
         border: none;
     }
 
+    #guess{
+        display: none;
+    }
+
 
     /* Celebration Images Style*/
 

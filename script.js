@@ -48,12 +48,12 @@
             displayGameAttempts[2].innerHTML = "Your Guesses :  "
 
 
-            if (wins > 0 && attempts >=1 ) {
-              winstreak = reswinstreak
-              displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
-              console.log(`Winstreak : ${reswinstreak}`);
+            // if (wins > 0 && attempts >=1 ) {
+            //   winstreak = reswinstreak
+            //   displayGameAttempts[4].textContent = `Winstreak : ${winstreak}`
+            //   console.log(`Winstreak : ${reswinstreak}`);
               
-            }
+            // }
 
             // else if (wins == 0 && attempts >=1) {
             //   winstreak = 0
@@ -80,7 +80,8 @@
             attempted.innerText=""
             guessinput.value = "";
 
-            guessinput.style="display:flex"
+
+            guessinput.style="display:none"
             submitbtn.style="display:flex justify-content: center;align-items: center;"
             giveupbtn.style="display:flex justify-content: center;align-items: center;"
 
@@ -116,10 +117,14 @@
         let generateNo = ()=>{
                outputMsg.style="background-color: white"
                 outputMsg.textContent = "Enter the Guessed Number"
+
+                guessinput.style="display:flex"
                
               //  console.log(attempts);
                randomNo = Math.round(Math.random()*10);
                console.log(randomNo);
+
+
               }
         generateBtn.addEventListener("click" , generateNo);
 
