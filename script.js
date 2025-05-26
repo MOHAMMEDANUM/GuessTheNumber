@@ -123,11 +123,13 @@
               //  console.log(attempts);
                randomNo = Math.round(Math.random()*10);
                console.log(randomNo);
+                  generateBtn.style="display:none"
 
 
               }
-        generateBtn.addEventListener("click" , generateNo);
 
+        generateBtn.addEventListener("click" , generateNo);
+              
 
 
         // Submit Guess Number function
@@ -183,6 +185,7 @@
                   outputMsg.textContent = `!! ${userInput} Number is Greater !! Try Again`
                   outputMsg.style="background-color:orange;border: none"
                   guessinput.value = "";
+                  
 
                 }
 
@@ -200,24 +203,39 @@
 
                 if(attempts > 0){
                   attempts--
+
+
+
+                  // Attempts Left 3
+
                 if(attempts==3){
                     displayimg.style="display:flex"
                     imagesOfAttempts[2].style="display:flex"
                     img3.style="display:flex"
                     img1.style="display:flex"
                     outputGussed.style="margin-left: 250px"
+                    generateBtn.style="display:none"
+
                 }
+
+                // Attempts Left 2
                 if(attempts==2){
                     displayimg.style="display:flex"
                     imagesOfAttempts[2].style="display:none"
                     outputGussed.style="margin-left: 250px"
+                    generateBtn.style="display:none"
+                    
                 }
+
+
+                // Attempts Left 1
                 if(attempts==1){
                     displayimg.style="display:flex"
                     imagesOfAttempts[2].style="display:none"
                     img1.style="display:none"
                     img2.style="display:none"
                     outputGussed.style="margin-left: 250px"
+                    generateBtn.style="display:none"
                 }
                   attempted.textContent=` Attempts left is : ${attempts} `
                 }
