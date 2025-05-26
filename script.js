@@ -27,10 +27,15 @@
         // Game Stats Section
         let gameStats = document.querySelector("text")
         let displayGameAttempts = document.getElementsByTagName("h2")
+        let matchesPlayed = document.querySelector("#matches-played")
+        let losses = document.querySelector("#losses")
+
 
 
         let randomNo
         let userInput
+        let playedCount = 0
+        let lossesCount = 0 
         let wins = 0
         let winstreak = ""
         let reswinstreak = ""
@@ -138,6 +143,8 @@
           
                 userInput = guessinput.value;
 
+                
+
                 // WINNER
                 
                 if(userInput == randomNo){
@@ -165,6 +172,9 @@
                   displayGameAttempts[6].textContent = `Winstreak : ${reswinstreak}`
 
                   displayGameAttempts[3].innerHTML +=' ' + userInput + ','
+
+                  playedCount++;
+                  matchesPlayed.textContent = `Matches Played : ${playedCount} `
 
 
                   return
@@ -260,9 +270,19 @@
                   giveupbtn.style="display:none"
                   displayGameAttempts[2].textContent = `Attempts : 0 / 3`
 
+
+                  // Matches Played
+                
+                  playedCount++;
+                  matchesPlayed.textContent = `Matches Played : ${playedCount} `
+                
+                  lossesCount++;
+                  losses.textContent = `Losses : ${lossesCount}`
+
                   return
                 }
 
+                
                 // Updating Game Stats
 
                 displayGameAttempts[2].textContent = `Attempts : ${attempts} / 3`
