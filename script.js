@@ -43,9 +43,9 @@
 
             // Resetting Game Stats
 
-            displayGameAttempts[1].textContent = `Attempts : 3 / 3`
+            displayGameAttempts[2].textContent = `Attempts : 3 / 3`
             // displayGameAttempts[4].textContent = `Winstreak : 0`
-            displayGameAttempts[2].innerHTML = "Your Guesses :  "
+            displayGameAttempts[3].innerHTML = "Your Guesses :  "
 
 
             // if (wins > 0 && attempts >=1 ) {
@@ -159,12 +159,12 @@
                   attempted.textContent=""
 
                   wins++;
-                  displayGameAttempts[3].textContent = `Wins : ${wins}`
+                  displayGameAttempts[4].textContent = `Wins : ${wins}`
 
                   reswinstreak = (wins > 0 && attempts >=1 )? winstreak++ : winstreak = 0
-                  displayGameAttempts[4].textContent = `Winstreak : ${reswinstreak}`
+                  displayGameAttempts[6].textContent = `Winstreak : ${reswinstreak}`
 
-                  displayGameAttempts[2].innerHTML +=' ' + userInput + ','
+                  displayGameAttempts[3].innerHTML +=' ' + userInput + ','
 
 
                   return
@@ -240,7 +240,7 @@
                   attempted.textContent=` Attempts left is : ${attempts} `
                 }
 
-                displayGameAttempts[2].innerHTML +=' ' + userInput + ','
+                displayGameAttempts[3].innerHTML +=' ' + userInput + ','
 
 
                 //  Losser Attempts Zero
@@ -258,14 +258,14 @@
                   submitbtn.style="display:none"
                   guessinput.style="display:none"
                   giveupbtn.style="display:none"
-                  displayGameAttempts[1].textContent = `Attempts : 0 / 3`
+                  displayGameAttempts[2].textContent = `Attempts : 0 / 3`
 
                   return
                 }
 
                 // Updating Game Stats
 
-                displayGameAttempts[1].textContent = `Attempts : ${attempts} / 3`
+                displayGameAttempts[2].textContent = `Attempts : ${attempts} / 3`
 
             }
 
