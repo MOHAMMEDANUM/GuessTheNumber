@@ -132,6 +132,14 @@
     
     /* input-submit-giveapp-btns */
 
+    #submit{
+        display: none;
+
+    }
+    #giveup{
+        display: none;
+    }
+
     .input-submit-giveup-btns{
         display: flex;
         justify-content: center;

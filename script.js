@@ -131,6 +131,12 @@
                   generateBtn.style="display:none"
 
 
+                  // After Generating Random Number Displaying UI Elements as Submit and Giveup Buttons
+
+                  submitbtn.style="display:flex;justify-content: center;align-items: center;"
+                  giveupbtn.style="display:flex;justify-content: center;align-items: center;"
+
+
               }
 
         generateBtn.addEventListener("click" , generateNo);
@@ -142,8 +148,9 @@
         let submitNo = ()=>{
           
                 userInput = guessinput.value;
-                // console.log(Math.floor(guessinput.value));   
+                // console.log(Math.floor(guessinput.value));  
                 
+                       
                 if((Number(userInput)-Math.floor(userInput)) > 0 ){
                 console.log(Number(userInput)-Math.floor(userInput));
 
