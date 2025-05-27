@@ -37,8 +37,8 @@
         let playedCount = 0
         let lossesCount = 0 
         let wins = 0
-        let winstreak = ""
-        let reswinstreak = ""
+        let winstreak = 0
+        let reswinstreak = 0
         let attempts = 3
 
 
@@ -142,6 +142,17 @@
         let submitNo = ()=>{
           
                 userInput = guessinput.value;
+                // console.log(Math.floor(guessinput.value));   
+                
+                if((Number(userInput)-Math.floor(userInput)) > 0 ){
+                console.log(Number(userInput)-Math.floor(userInput));
+
+                outputMsg.textContent = "Please enter a Valid Integer Number between 1 to 10"
+                outputMsg.style="background-color: red;color:white;border:none"
+                return
+              }
+              
+                
 
                 
 
@@ -168,18 +179,19 @@
                   wins++;
                   displayGameAttempts[4].textContent = `Wins : ${wins}`
 
-                  reswinstreak = (wins > 0 && attempts >=1 )? winstreak++ : winstreak = 0
-                  displayGameAttempts[6].textContent = `Winstreak : ${reswinstreak}`
+                  reswinstreak = (wins >= 3 && lossesCount < wins )? winstreak++ : winstreak = 0
+
+                  displayGameAttempts[6].textContent = `Winstreak : ${winstreak}`
+
 
                   displayGameAttempts[3].innerHTML +=' ' + userInput + ','
 
                   playedCount++;
                   matchesPlayed.textContent = `Matches Played : ${playedCount} `
 
-
                   return
                 }
-
+                
 
                 // Invalid Input
 
@@ -225,6 +237,7 @@
                     img1.style="display:flex"
                     outputGussed.style="margin-left: 250px"
                     generateBtn.style="display:none"
+                    
 
                 }
 
@@ -234,6 +247,7 @@
                     imagesOfAttempts[2].style="display:none"
                     outputGussed.style="margin-left: 250px"
                     generateBtn.style="display:none"
+
                     
                 }
 
