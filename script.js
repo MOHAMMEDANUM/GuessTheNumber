@@ -159,10 +159,7 @@
                 return
               }
               
-                
-
-                
-
+              
                 // WINNER
                 
                 if(userInput == randomNo){
@@ -214,7 +211,6 @@
                   outputMsg.textContent = `!! ${userInput} Number is Greater !! Try Again`
                   outputMsg.style="background-color:orange;border: none"
                   guessinput.value = "";
-                  
 
                 }
 
@@ -225,7 +221,6 @@
                   outputMsg.style="background-color:orange;border: none"
                   guessinput.value = "";
 
-
                 }
 
                 //  Attempts Left
@@ -235,41 +230,40 @@
 
 
 
-                  // Attempts Left 3
+                              // Attempts Left 3
 
-                if(attempts==3){
-                    displayimg.style="display:flex"
-                    imagesOfAttempts[2].style="display:flex"
-                    img3.style="display:flex"
-                    img1.style="display:flex"
-                    outputGussed.style="margin-left: 250px"
-                    generateBtn.style="display:none"
-                    
+                            if(attempts==3){
+                                displayimg.style="display:flex"
+                                imagesOfAttempts[2].style="display:flex"
+                                img3.style="display:flex"
+                                img1.style="display:flex"
+                                outputGussed.style="margin-left: 250px"
+                                generateBtn.style="display:none"
+                                
+                            }
 
-                }
+                            // Attempts Left 2
+                            if(attempts==2){
+                                displayimg.style="display:flex"
+                                imagesOfAttempts[2].style="display:none"
+                                outputGussed.style="margin-left: 250px"
+                                generateBtn.style="display:none"
 
-                // Attempts Left 2
-                if(attempts==2){
-                    displayimg.style="display:flex"
-                    imagesOfAttempts[2].style="display:none"
-                    outputGussed.style="margin-left: 250px"
-                    generateBtn.style="display:none"
-
-                    
-                }
+                                
+                            }
 
 
-                // Attempts Left 1
-                if(attempts==1){
-                    displayimg.style="display:flex"
-                    imagesOfAttempts[2].style="display:none"
-                    img1.style="display:none"
-                    img2.style="display:none"
-                    outputGussed.style="margin-left: 250px"
-                    generateBtn.style="display:none"
-                }
-                  attempted.textContent=` Attempts left is : ${attempts} `
-                }
+                            // Attempts Left 1
+                            if(attempts==1){
+                                displayimg.style="display:flex"
+                                imagesOfAttempts[2].style="display:none"
+                                img1.style="display:none"
+                                img2.style="display:none"
+                                outputGussed.style="margin-left: 250px"
+                                generateBtn.style="display:none"
+                            }
+                              attempted.textContent=` Attempts left is : ${attempts} `
+                  }
 
                 displayGameAttempts[3].innerHTML +=' ' + userInput + ','
 
