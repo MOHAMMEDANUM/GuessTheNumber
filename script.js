@@ -41,6 +41,10 @@
         let reswinstreak = 0
         let attempts = 3
 
+        let matchesResultsCount=0
+        let matchesResults = []
+
+
 
         // play again function       
 
@@ -182,10 +186,13 @@
 
                   wins++;
                   displayGameAttempts[4].textContent = `Wins : ${wins}`
+                  
+                  matchesResults[matchesResultsCount]=1
+                  matchesResultsCount++
 
-                  reswinstreak = (wins >= 3 && lossesCount < wins )? winstreak++ : winstreak = 0
+                  // reswinstreak = (wins >= 3 && lossesCount < wins )? winstreak++ : winstreak = 0
 
-                  displayGameAttempts[6].textContent = `Winstreak : ${winstreak}`
+                  displayGameAttempts[6].textContent = `Winstreak : ${matchesResults}`
 
 
                   displayGameAttempts[3].innerHTML +=' ' + userInput + ','
@@ -293,6 +300,11 @@
                 
                   lossesCount++;
                   losses.textContent = `Losses : ${lossesCount}`
+
+                  matchesResults[matchesResultsCount]=0
+                  matchesResultsCount++
+                  displayGameAttempts[6].textContent = `Winstreak : ${matchesResults}`
+
 
                   return
                 }
